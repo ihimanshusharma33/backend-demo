@@ -27,7 +27,7 @@ app.post('/mail', async (req, res) => {
         });
 
         const mailOptions = {
-            from: emailPassword,
+            from: emailUser,
             to: 'info@werev.co.in',
             subject: 'Mail from WeRev website',
             text: `Name:${fullname}
