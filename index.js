@@ -17,7 +17,6 @@ app.get('/', (req, res) => {
 app.post('/mail', async (req, res) => {
     try {
         const { email,fullname, message } = req.body;
-        console.log(email,fullname,message);z
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
@@ -30,8 +29,8 @@ app.post('/mail', async (req, res) => {
             from: emailUser,
             to: 'werev2022@gmail.com',
             subject: 'Mail from WeRev website',
-            text: `Name:${fullname}
-            Email:${email}
+            text: `Name:${fullname}\n
+            Email:${email}\n
             Message:-${message}`
         };
         const info = await transporter.sendMail(mailOptions);
