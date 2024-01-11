@@ -17,8 +17,7 @@ app.get('/', (req, res) => {
 app.post('/mail', async (req, res) => {
     try {
         const { email,fullname, message } = req.body;
-console.log(email,fullname,message);
-        // Create a Nodemailer transporter
+        console.log(email,fullname,message);z
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
@@ -29,7 +28,7 @@ console.log(email,fullname,message);
 
         const mailOptions = {
             from: emailPassword,
-            to: 'hs9812946053@gmail.com',
+            to: 'info@werev.co.in',
             subject: 'Mail from WeRev website',
             text: `Name:${fullname}
             Email:${email}
