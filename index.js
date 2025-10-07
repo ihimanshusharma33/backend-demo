@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import bodyParser from 'body-parser';
-import { Resend } from '@resend/node';
+import { Resend } from 'resend';
 import { config } from 'dotenv';
 config();
 
